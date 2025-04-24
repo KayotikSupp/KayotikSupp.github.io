@@ -344,24 +344,51 @@ span {
     padding: 0px;
 }
 
-.stream_buttons {
+.stream_buttons a {
+    /* Убираем все лишнее */
+    width: auto;
+    /* justify-content: space-between; /* Выравниваем по краям */
+    color: inherit;
+
+    /* Прозрачность и размытие */
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* Текст */
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+
+    /* Отступы и скругление */
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    /* Flexbox для выравнивания */
     display: flex;
-    justfy-content: space-between;
-    background-color: #F9F6EE;
-    border-radius: 8px;
-    padding: 8px;
-    margin: 8px;
-
-    border: 1px solid #E5E7EB;
-    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
+    align-items: center;
+    justify-content: center; /* Выравниваем по центру */
 }
 
-.stream_buttons:hover {
-    background-color: #E5E7EB;
+.stream_buttons a:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Более темный фон при наведении */
+    transform: scale(1.05); /* Небольшое увеличение при наведении */
 }
 
-.stream_buttons {
-    transition: transform .3s;
+.stream_buttons a img {
+    margin-left: 10px; /* Отступ от текста */
+    filter: invert(1); /* Делаем картинку белой */
+    position: absolute;
+    right: 10px;
+}
+
+.stream_buttons a{
+    position: relative;
+}
+
+.stream_buttons_list ul li {
+    margin-bottom: 10px; /* Добавляем отступ снизу */
 }
 
 /*--------------------------------------------------------------
